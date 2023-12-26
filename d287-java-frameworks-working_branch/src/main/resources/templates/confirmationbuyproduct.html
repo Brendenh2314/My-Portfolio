@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <meta http-equiv="refresh" content="4;URL='/mainscreen'">
+
+    <title>Order Confirmed</title>
+
+    <style>
+        body {
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-top: 20px;
+            text-align: center;
+            color: #333;
+        }
+
+        .back-btn {
+            margin-top: 30px;
+        }
+
+        .back-btn a {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .back-btn a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+<h1>Thank you for your purchase!</h1>
+
+<div class="back-btn">
+    <a th:href="@{/mainscreen}">Back to Main Screen</a>
+</div>
+</body>
+
+</html>
