@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Vacation Scheduler</string>
+    <string name="channel_name">Vacation Alerts</string>
+    <string name="channel_description">Notifications for vacation start and end reminders</string>
+</resources>

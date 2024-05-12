@@ -1,0 +1,45 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- Excursion Name Label -->
+    <TextView
+        android:id="@+id/labelExcursionName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Excursion Name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- First TextView -->
+    <TextView
+        android:id="@+id/excursionTextView1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="TextView 1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelExcursionName"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Second TextView -->
+    <TextView
+        android:id="@+id/excursionTextView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="TextView 2"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/excursionTextView1"
+        android:layout_marginTop="8dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
