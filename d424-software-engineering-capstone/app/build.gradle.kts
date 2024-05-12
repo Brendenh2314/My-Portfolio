@@ -37,7 +37,13 @@ dependencies {
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
+    implementation("junit:junit:4.12")
+    implementation("junit:junit:4.12")
     testImplementation(libs.junit)
+    testImplementation ("org.mockito:mockito-core:5.12.0")
+    androidTestImplementation ("androidx.test.espresso:espresso-core:3.4.0")
+    androidTestImplementation ("androidx.test:runner:1.4.0")
+    androidTestImplementation ("adroidx.test:rules:1.4.0")
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
 

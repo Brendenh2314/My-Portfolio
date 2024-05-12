@@ -5,6 +5,8 @@ import androidx.room.Entity;
 import androidx.room.Index;
 import androidx.room.PrimaryKey;
 
+import com.example.acuityquick.database.RoomRepository;
+
 @Entity(tableName = "rooms", indices = {@Index(value = "room_number", unique = true)})
 public class HospitalRoom {
     @PrimaryKey(autoGenerate = true)
@@ -78,7 +80,7 @@ public class HospitalRoom {
     public void setTotalAcuityScore(int totalAcuityScore) { this.totalAcuityScore = totalAcuityScore; }  // Adding setter for Room
 
     // Helper methods to calculate scores based on requirements
-    private int getAirScoreFromRequirement(String requirement) {
+    public int getAirScoreFromRequirement(String requirement) {
         switch (requirement) {
             case "Room Air": return 1;
             case "Low Flow Oxygen": return 2;
@@ -87,7 +89,7 @@ public class HospitalRoom {
         }
     }
 
-    private int getMobilityScoreFromRequirement(String requirement) {
+    public int getMobilityScoreFromRequirement(String requirement) {
         switch (requirement) {
             case "Independent": return 1;
             case "Assisted": return 2;
@@ -96,7 +98,7 @@ public class HospitalRoom {
         }
     }
 
-    private int getNutritionScoreFromRequirement(String requirement) {
+    public int getNutritionScoreFromRequirement(String requirement) {
         switch (requirement) {
             case "Normal Diet": return 1;
             case "Modified Diet": return 2;
@@ -127,5 +129,15 @@ public class HospitalRoom {
                 ", nutritionRequirement='" + nutritionRequirement + '\'' +
                 ", totalAcuityScore=" + totalAcuityScore +
                 '}';
+    }
+
+    public boolean saveDetails(RoomRepository repository) {
+        try {
+            repository.insert(this); // Attempt to insert the current object
+            return true; // Return true if the insert operation is successful
+        } catch (RuntimeException e) {
+            System.out.println("Failed to save room details: " + e.getMessage()); // Log the error message
+            return false; // Return false if an exception occurs
+        }
     }
 }

@@ -35,10 +35,11 @@ public class RoomRepository {
         return allHospitalRooms;
     }
 
-    public void insert(HospitalRoom room) {
+    public boolean insert(HospitalRoom room) {
         databaseExecutor.execute(() -> {
             roomDAO.insert(room);
         });
+        return true;
     }
 
     public void update(HospitalRoom room) {
@@ -47,9 +48,10 @@ public class RoomRepository {
         });
     }
 
-    public void delete(HospitalRoom room) {
+    public boolean delete(HospitalRoom room) {
         databaseExecutor.execute(() -> {
             roomDAO.delete(room);
         });
+        return true;
     }
 }
