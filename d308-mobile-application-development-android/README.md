@@ -1,7 +1,7 @@
 # WESTERN GOVERNOR UNIVERSITY 
 ## D308 – MOBILE APPLICATION DEVELOPMENT (ANDROID)
 ## Vacation Scheduler
-# In this app you are able to schedule a vacation and excursions within that vacation. You can save as many as you like, share with your friends, and set reminders on when the vacations are starting.
+## In this app you are able to schedule a vacation and excursions within that vacation. You can save as many as you like, share with your friends, and set reminders on when the vacations are starting.
 ## BASIC INSTRUCTIONS
 1. Starting in the app, select the start here button and it will lead you to a Vacation List page which stores all of your saved vacations.
 2. Select the add button bottom right and it will take you to an empty Vacation Details page with a form to fill out. The other way you can get to the Vacation Detials page is by selecting on an already saved vacation. If thats what you choose to do, the detials will populate.
